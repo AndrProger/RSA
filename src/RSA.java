@@ -132,8 +132,8 @@ public class RSA {
             }
 
             BigInteger encryptSym=new BigInteger((int)sym+"");
-            encryptSym=encryptSym.pow(e.intValue());
             encryptSym=encryptSym.mod(n);
+            encryptSym=encryptSym.pow(e.intValue());
 //            encryptText+=encryptSym.toString()+"/";
         }
         return decryptText;
